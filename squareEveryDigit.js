@@ -5,7 +5,7 @@
 // Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
 // Note: The function accepts an integer and returns an integer.
 // Happy Coding!
-// solution:
+// solution1:
 function squareDigits(num) {
   let numStr = String(num);
   let result = '';
@@ -17,4 +17,15 @@ function squareDigits(num) {
   }
 
   return parseInt(result);
+}
+
+// solution2:
+function squareDigits(num) {
+  return Number(
+    num
+      .toSrting()
+      .split('')
+      .map(d => d ** 2)
+      .join(''),
+  );
 }
